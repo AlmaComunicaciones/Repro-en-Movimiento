@@ -1,0 +1,105 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<title>Nombre de Radio</title>
+<link rel="shortcut icon" href="#" type="image/x-icon">
+<link rel="icon" href="#" type="image/x-icon">
+<style>
+    html, body {
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+    }
+    .fs-vid-background {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1;
+    }
+    .fs-vid-background video {
+        object-fit: cover;
+        width: 100%;
+        height: 100%;
+    }
+    video {
+        max-width: 100%;
+    }
+    .lunaradio-container {
+        position: absolute;
+        bottom: 20px; /* Ajusta la distancia desde abajo según sea necesario */
+        width: 100%;
+        text-align: center;
+        z-index: 2;
+    }
+    #lunaradio {
+        width: 400px; /* Ancho fijo para el reproductor */
+        height: 600px; /* Altura fija para el reproductor */
+        margin: 0 auto; /* Centrar horizontalmente */
+    }
+</style>
+</head>
+<body>
+<div class="fs-vid-background">
+    <video autoplay="true" muted="true" loop="true">
+        <source src="https://radiovocesdesalvacion.000webhostapp.com/video/bg.mp4" type="video/mp4">
+    </video>
+</div>
+<script src="js/jquery-3.2.1.min.js"></script> 
+<script src="js/lunaradio.min.js"></script>
+
+<div class="lunaradio-container">
+    <div id="lunaradio"></div>
+</div>
+
+<script>
+jQuery(document).ready(function($) {
+    $("#lunaradio").lunaradio({
+        userinterface: "big",
+        backgroundcolor: "",
+        fontcolor: "#ffffff",
+        hightlightcolor: "#DC143C",
+        fontname: "Saira Condensed",
+        googlefont: "Saira+Condensed:wght@100",
+        fontratio: "0.5",
+        radioname: "His Radio",
+        scroll: "true",
+        coverimage: "https://i.postimg.cc/k4W803My/nocoverr.jpg",
+        usevisualizer: "real",
+        coverstyle: "animated",
+        visualizertype: "3",
+        multicolorvisualizer: "true",
+        color1: "f6f6f6",
+        color2: "323edd",
+        color3: "fc5404",
+        color4: "#fa225b",
+        itunestoken: "1000lIPN",
+        metadatatechnic: "creativo-agencia-metadato",
+        ownmetadataurl: "https://zenoplay.zenomedia.com/api/zenofm/nowplaying/lbrbcbmxqreuv",
+        streamurl: "https://stream.zeno.fm/lbrbcbmxqreuv",
+        streamtype: "radiozeno",
+        icecastmountpoint: "/radio.mp3",
+        radionomyid: "lbrbcbmxqreuv",
+        radionomyapikey: "",
+        radiozenoid: "lbrbcbmxqreuv",
+        radiojarid: "",
+        radiocoid: "",
+        shoutcastpath: "/stream",
+        shoutcastid: "1",
+        streamsuffix: "",
+        metadatainterval: "20000",
+        volume: "85",
+        debug: "false",
+        usestreamcorsproxy: "false", 
+        corsproxy: "https://corsradio.herokuapp.com/index.php?q=",
+        autoplay:"true",
+    });
+});
+</script>
+
+</body>
+</html>
